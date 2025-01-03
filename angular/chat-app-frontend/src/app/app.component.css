@@ -1,0 +1,148 @@
+/* Gradient Background for Header */
+.bg-gradient {
+    background: linear-gradient(to right, #c1a0e4, #2575fc); /* Gradient from purple to blue */
+}
+
+/* Gradient Button */
+.btn-gradient {
+    background: linear-gradient(to right, #8736df, #feb47b); /* Gradient from pink to orange */
+    border: none;
+    color: white;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(to right, #feb47b, #ff7e5f); /* Reverse gradient on hover */
+}
+
+/* Chat Box Styling */
+.chat-box {
+    background: #f9f9f9; /* Light neutral background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.chat-box:hover {
+    background-color: #f1f1f1; /* Slight change on hover */
+}
+
+/* Input and Button Styles */
+.input-group input,
+.input-group button {
+    border-radius: 25px;
+    padding: 12px 20px;
+}
+
+.input-group input {
+    background-color: #f1f1f1; /* Light background for input fields */
+    border: 1px solid #ddd; /* Light border */
+}
+
+.input-group button {
+    background-color: #2575fc; /* Vivid blue */
+    color: white;
+    border: none;
+}
+
+.input-group button:hover {
+    background-color: #6a11cb; /* Darker blue on hover */
+}
+
+/* Shadow Effects */
+.shadow-sm {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-lg {
+    box-shadow: 0 4px 15px rgba(245, 234, 234, 0.774);
+}
+
+/* Form Control Styles */
+.form-control {
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: 1px solid #ddd; /* Light border */
+}
+
+.form-control:focus {
+    border-color: #2575fc; /* Light blue border on focus */
+    box-shadow: 0 0 5px rgba(37, 117, 252, 0.5); /* Blue shadow on focus */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .chat-box {
+        height: 250px; /* Reduce chat box height on mobile */
+    }
+}
+
+@media (max-width: 576px) {
+    .container-fluid {
+        padding: 0; /* Remove margins on smaller screens */
+    }
+}
+
+/* Body Font */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern and readable font */
+}
+
+/* Card style for incoming and outgoing messages */
+.card {
+    max-width: 70%;
+    margin: 5px 0;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.card.justify-content-start {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.card.justify-content-end {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.card .text-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Incoming message styles */
+.bg-light {
+    background-color: #b489e67c !important; /* Coral color for incoming messages */
+}
+
+/* Outgoing message styles */
+.bg-primary {
+    background-color: #fffefd85 !important; /* Gray-green for outgoing messages */
+}
+
+/* Text color for incoming and outgoing messages */
+.text-white {
+    color: rgb(41, 41, 41) !important; /* White text for outgoing messages */
+}
+
+.text-primary {
+    color: rgb(41, 41, 41) !important; /* Dark green text for incoming messages */
+}
+
+/* Align text to the right for outgoing messages */
+.card.text-right {
+    text-align: right;
+}
+
+.ml-2 {
+    margin-left: 8px;
+}
+
+.text-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,66 @@
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.component.css"> <!-- Ensure the correct path to your CSS -->
+</head>
+
+<div class="container-fluid bg-dark text-light vh-100 d-flex flex-column">
+  <!-- Header Section -->
+  <div class="row bg-gradient py-3">
+    <div class="col text-center">
+      <h1 class="m-0">BIENVENUE</h1>
+      <p class="lead text-muted">Connect, Chat, and Enjoy</p>
+    </div>
+  </div>
+
+  <!-- Step to configure the username -->
+  <div *ngIf="!isUsernameSet" class="row flex-grow-1 d-flex justify-content-center align-items-center">
+    <div class="col-12 col-md-6 text-center">
+      <input
+        [(ngModel)]="username"
+        class="form-control mb-3 rounded-pill shadow-sm"
+        placeholder="Enter your username"
+      />
+      <button class="btn btn-gradient w-100 rounded-pill shadow-sm" (click)="setUsername()">Start Chatting</button>
+    </div>
+  </div>
+
+  <!-- Chat Interface -->
+  <div *ngIf="isUsernameSet" class="row flex-grow-1">
+    <div class="col-12 col-md-8 mx-auto d-flex flex-column">
+      <!-- Message Box -->
+      <div
+        class="chat-box flex-grow-1 bg-light text-dark rounded p-3 mb-3 shadow-lg"
+        style="overflow-y: auto; height: 300px; background: linear-gradient(to bottom, #feb47b, #8736df);"
+      >
+        <div *ngFor="let msg of messages" class="mb-3">
+          <div class="card p-2 d-flex" [ngClass]="{
+            'bg-light': msg.username !== username, 
+            'bg-primary text-white': msg.username === username, 
+            'justify-content-start': msg.username !== username, 
+            'justify-content-end': msg.username === username
+          }">
+            <div class="d-flex align-items-center">
+              <strong class="text-truncate" [ngClass]="{
+                'text-primary': msg.username !== username, 
+                'text-white': msg.username === username
+              }">
+                {{ msg.username }}:
+              </strong>
+              <span class="ml-2">{{ msg.text }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Zone -->
+      <div class="input-group">
+        <input
+          [(ngModel)]="message"
+          class="form-control rounded-pill shadow-sm"
+          placeholder="Enter your message"
+        />
+        <button class="btn btn-gradient rounded-pill shadow-sm" (click)="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
