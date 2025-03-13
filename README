@@ -1,5 +1,20 @@
-cd backend
-node server.js
+une application de chat en temps réel développée avec Node.js et Angular, utilisant Socket.io pour la communication en temps réel entre le serveur et le client.
 
-cd front
-ng serve
+Pour executer cette application: 
+etape 01
+Lancer powershell
+> cd chat-app-backend
+> node server.js
+
+etape 02
+Lancer powershell
+> cd chat-app-frontend
+> ng serve
+
+Plus d'informations:
+·Backend : 
+Construit avec Node.js et Express, il gère les connexions des clients et la diffusion des messages.
+·Frontend :
+ Développé avec Angular, il offre une interface utilisateur interactive pour envoyer et recevoir des messages.
+·Communication en temps réel : 
+Socket.io est utilisé pour établir une connexion bidirectionnelle entre le serveur et le client, permettant la transmission instantanée des messages.
